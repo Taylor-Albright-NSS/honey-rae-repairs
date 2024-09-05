@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react"
 import { getAllEmployees } from "../../../services/employeeService"
 
-export const Ticket = (props) => {
+export const Ticket = ({ ticket }) => {
     const [employees, setEmployees] = useState([])
-    const [assignedEmployee, setAssignedEmployee] = useState({}) 
-
+    const [assignedEmployee, setAssignedEmployee] = useState({})
+    
     useEffect(() => {
         getAllEmployees().then(employeesArray => {
             setEmployees(employeesArray)
@@ -12,14 +12,14 @@ export const Ticket = (props) => {
     }, [])
     
     useEffect(() => {
-        const foundEmployee = employees.find(employee => employee.id === props.ticket.employeeTickets[0]?.employeeId)
+        const foundEmployee = employees.find(employee => employee.id === ticket.employeeTickets[0]?.employeeId)
         setAssignedEmployee(foundEmployee)
-    }, [employees, props.ticket])
+    }, [employees, ticket])
 
     return (
-    <section className='ticket' key={props.ticket.id}>
-    <header className='ticket-info'>#{props.ticket.id}</header>
-    <div>{props.ticket.description}</div>
+    <section className='ticket' key={ticket.id}>
+    <header className='ticket-info'>#{ticket.id}</header>
+    <div>{ticket.description}</div>
     <footer>
         <div>
             <div className='ticket-info'>assignee</div>
@@ -27,7 +27,7 @@ export const Ticket = (props) => {
         </div>
       <div>
         <div className='ticket-info'>emergency</div>
-        <div>{props.ticket.emergency ? "yes" : "no"}</div>
+        <div>{ticket.emergency ? "yes" : "no"}</div>
       </div>
     </footer>
   </section>
