@@ -30,8 +30,7 @@ export const TicketList = () => {
     <div className='tickets-container'>
       <h2>Tickets</h2>
       <div>
-        <button className='filter-button button-primary' onClick={() => setShowEmergencyOnly(true)}>Emergency</button>
-        <button className='filter-button button-info' onClick={() => setShowEmergencyOnly(false)}>Show All</button>
+
       </div>
       <article className='tickets'>
         {filteredTickets.map(ticketObj => {
