@@ -69,35 +69,35 @@ button {
 
 /* These are all the color options for the buttons */
 /* If you change the color variables, be sure to change the hover colors to be a darker shade of the colors you chose*/
-.btn-primary {
+.button-primary {
   background-color: var(--primary);
 }
 
-.btn-primary:hover {
+.button-primary:hover {
   background-color: #e5a000;
 }
 
-.btn-secondary {
+.button-secondary {
   background-color: var(--secondary);
 }
 
-.btn-secondary:hover {
+.button-secondary:hover {
   background-color: #0097d7;
 }
 
-.btn-warning {
+.button-warning {
   background-color: var(--warning);
 }
 
-.btn-warning:hover {
+.button-warning:hover {
   background-color: #e14617;
 }
 
-.btn-info {
+.button-info {
   background-color: var(--info);
 }
 
-.btn-info:hover {
+.button-info:hover {
   background-color: #71a500;
 }
 
