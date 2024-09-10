@@ -32,7 +32,7 @@ export const TicketList = () => {
     useEffect(() => {
         const searchTickets = allTickets.filter(ticket => 
           ticket.description.toLowerCase().includes(searchString.toLowerCase()))
-        setFilteredTickets(searchTickets)
+          setFilteredTickets(searchTickets)
     }, [searchString, allTickets])
 
     return (
